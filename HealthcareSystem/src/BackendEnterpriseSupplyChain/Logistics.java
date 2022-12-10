@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package BackendEnterpriseSupplyChain;
+
+import BackendEnterprise.Enterprise;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author asus
+ */
+public class Logistics extends Enterprise {
+    
+    private ArrayList<Handler> handler;
+    private ArrayList<Vehicle> vehicle;
+
+    public Logistics(String address, String userName, String pwd, String enterpriseName, String regNumber) {
+        super(address, userName, pwd, enterpriseName, regNumber);
+    }
+
+    
+
+    public void setHandler(ArrayList<Handler> handler) {
+        this.handler = handler;
+    }
+    public ArrayList<Handler> getHandler() {
+        return handler;
+    }
+    public void setVehicle(ArrayList<Vehicle> vehicle) {
+        this.vehicle = vehicle;
+    }
+     public ArrayList<Vehicle> getVehicle() {
+        return vehicle;
+    }
+}

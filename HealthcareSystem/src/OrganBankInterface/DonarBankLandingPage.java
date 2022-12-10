@@ -22,14 +22,14 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
      * Creates new form DonarBankLandingPage
      */
     MainJFrameForm MainLPage;
-    private OperatingSystem operatingSystem;
+    private OperatingSystem operatingsys;
     private DB4OUtility dB4OUtility;
     
     public DonarBankLandingPage(MainJFrameForm MainLPage, DB4OUtility dB4OUtility, OperatingSystem operatingSystem) {
         initComponents();
         this.MainLPage = MainLPage;
         this.dB4OUtility = dB4OUtility;
-        this.operatingSystem = operatingSystem;
+        this.operatingsys = operatingSystem;
     }
 
     /**
@@ -147,11 +147,11 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         
         try {
             if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
-            DonorBank donbank = (DonorBank) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
+            DonorBank donbank = (DonorBank) operatingsys.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(donbank == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
-                DonarBankAdminLogin ap = new DonarBankAdminLogin(MainLPage, dB4OUtility, operatingSystem, donbank);
+                DonarBankAdminLogin ap = new DonarBankAdminLogin(MainLPage, dB4OUtility, operatingsys, donbank);
                 MainLPage.setContentPane(ap);
                 MainLPage.invalidate();
                 MainLPage.validate();
@@ -165,11 +165,11 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
 
         try {
             if (RoleCmb.getSelectedItem().toString() == "Donor") {
-            DonorUser don = (DonorUser) operatingSystem.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
+            DonorUser don = (DonorUser) operatingsys.loginAuthentication(UsernameTxt.getText(), PassTxt.getText());
             if(don == null){
                 JOptionPane.showMessageDialog(this, "Incorrect credential");
             }else{
-                DonarLogin ap = new DonarLogin(MainLPage, dB4OUtility, operatingSystem, don);
+                DonarLogin ap = new DonarLogin(MainLPage, dB4OUtility, operatingsys, don);
                 MainLPage.setContentPane(ap);
                 MainLPage.invalidate();
                 MainLPage.validate();
@@ -185,14 +185,14 @@ public class DonarBankLandingPage extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         if (RoleCmb.getSelectedItem().toString() == "Donor") {
-            DonarBankSignUp signdon = new DonarBankSignUp(MainLPage, dB4OUtility, operatingSystem);
+            DonarBankSignUp signdon = new DonarBankSignUp(MainLPage, dB4OUtility, operatingsys);
             MainLPage.setContentPane(signdon);
             MainLPage.invalidate();
             MainLPage.validate();
         }
 
         if (RoleCmb.getSelectedItem().toString() == "Donor Admin") {
-            DonarBankAdminSignUp s = new DonarBankAdminSignUp(MainLPage, dB4OUtility, operatingSystem);
+            DonarBankAdminSignUp s = new DonarBankAdminSignUp(MainLPage, dB4OUtility, operatingsys);
             MainLPage.setContentPane(s);
             MainLPage.invalidate();
             MainLPage.validate();

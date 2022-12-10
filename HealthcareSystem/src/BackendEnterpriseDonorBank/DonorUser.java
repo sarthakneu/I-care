@@ -13,18 +13,22 @@ import java.util.Date;
  */
 public class DonorUser extends User{
     
-    private String donorBankName;
+    private String donorbankname;
+    
+    
     
     public DonorUser(String uname, String user_password, String userId, String PersonName, String address, String gender, String phoneNumber, Date dob,String donorBankName) {
         super(uname, user_password, userId, PersonName, address, gender, phoneNumber, dob);
-        this.donorBankName = donorBankName;
+        this.donorbankname = donorBankName;
     }
 
-    public String getDonorBankName() {
-        return donorBankName;
+    public String getDonorbankname() {
+        return donorbankname;
     }
+    
+    
 
-    public void setDonorBankName(String donorBankName) {
-        this.donorBankName = donorBankName;
+    public void setDonorbankname(String donorbankname) {
+        this.donorbankname = donorbankname;
     }
 }
