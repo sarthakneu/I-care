@@ -22,4 +22,4 @@
 
 ![MicrosoftTeams-image](https://user-images.githubusercontent.com/114865815/206925452-0f1a2b65-b9b7-4c0e-bcdb-84cec4ec18e8.png)
 
-### Our goal is to reduce the patient's total lifecycle, which includes many operations after receiving a transplant.
+### Our goal is to increase the patient's total lifecycle, which includes many operations after receiving a transplant.
